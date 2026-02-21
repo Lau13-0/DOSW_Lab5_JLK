@@ -12,12 +12,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 |-------|-------------|
 | **ID** | EP-01 |
 | **Título** | Autenticación y Gestión de Usuarios |
-| **Descripción** | Explique el por qué Bankify necesita esta épica |
-| **Stakeholder** | ¿Quién es el stakeholder interesado en que se implemente esta épica? |
-
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | EP-02 |
+| **Descripción** | Bankify necesita esta épica para establecer un sistema seguro de autenticación que permita a operadores y clientes acceder a la plataforma con credenciales de usuario y contraseña. Además, es necesario un módulo de gestión de usuarios que permita a los administradores crear, activar e inactivar cuentas de usuario de forma controlada. |
+| **Stakeholder** | Administradores del sistema, Operadores de Bankify y Clientes finales |
 | **Título** | Gestión de Clientes y Cuentas Bancarias |
 | **Descripción** | Explique el por qué Bankify necesita esta épica |
 | **Stakeholder** | ¿Quién es el stakeholder interesado en que se implemente esta épica? |
@@ -43,34 +39,38 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | HU-01 |
-| **Título** | |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Prioridad** | [Alta] [Media] [Baja] |
-| **Estimación** | Puntos de historia |
+| **Título** | Crear nuevo usuario desde administrador |
+| **Descripción** | Como administrador del sistema quiero crear nuevas cuentas de usuario con nombre de usuario y contraseña para que operadores y clientes puedan acceder a la plataforma Bankify |
+| **Prioridad** | [Alta] |
+| **Estimación** | 8 puntos de historia |
+| **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | HU-02 |
-| **Título** | |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Prioridad** | [Alta] [Media] [Baja] |
-| **Estimación** | Puntos de historia |
+| **Título** | Autenticar usuario con credenciales |
+| **Descripción** | Como usuario (operador o cliente) quiero iniciar sesión con mi usuario y contraseña para acceder a mis funcionalidades en la plataforma |
+| **Prioridad** | [Alta] |
+| **Estimación** | 8 puntos de historia |
+| **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | HU-03 |
-| **Título** | |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Prioridad** | [Alta] [Media] [Baja] |
-| **Estimación** | Puntos de historia |
+| **Título** | Gestionar estado de cuentas de usuario |
+| **Descripción** | Como administrador quiero activar e inactivar cuentas de usuario para controlar el acceso a la plataforma |
+| **Prioridad** | [Media] |
+| **Estimación** | 5 puntos de historia |
+| **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | HU-04 |
-| **Título** | |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Prioridad** | [Alta] [Media] [Baja] |
-| **Estimación** | Puntos de historia |
+| **Título** | Registrar y consultar clientes bancarios |
+| **Descripción** | Como administrador quiero crear y consultar información de clientes para gestionar los datos de quiénes son los titulares de las cuentas bancarias |
+| **Prioridad** | [Alta] |
+| **Estimación** | 13 puntos de historia |
+| **Épica asociada** | EP-02 |
 
 ---
 
@@ -79,63 +79,63 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | TR-01 |
-| **Título** | |
+| **Título** | Diseñar modelo de datos de usuario |
 | **ID de la Historia de Uso asociada** | HU-01 |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Tareas requisito** | Id de las tareas de las cuales es dependiente |
+| **Descripción** | Crear el modelo de datos para almacenar información de usuarios (username, contraseña hasheada, estado, tipo de rol) |
+| **Tareas requisito** | Ninguna |
 
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | TR-02 |
-| **Título** | |
+| **Título** | Implementar servicio de creación de usuarios |
 | **ID de la Historia de Uso asociada** | HU-01 |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Tareas requisito** | Id de las tareas de las cuales es dependiente |
+| **Descripción** | Desarrollar la lógica para crear nuevos usuarios con validación de datos (username único, contraseña segura) |
+| **Tareas requisito** | TR-01 |
 
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | TR-03 |
-| **Título** | |
+| **Título** | Implementar servicio de autenticación |
 | **ID de la Historia de Uso asociada** | HU-02 |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Tareas requisito** | Id de las tareas de las cuales es dependiente |
+| **Descripción** | Desarrollar el servicio de validación de credenciales y generación de sesiones/tokens |
+| **Tareas requisito** | TR-01 |
 
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | TR-04 |
-| **Título** | |
+| **Título** | Crear interfaz de login |
 | **ID de la Historia de Uso asociada** | HU-02 |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Tareas requisito** | Id de las tareas de las cuales es dependiente |
+| **Descripción** | Desarrollar la interfaz de usuario para que los usuarios inicien sesión |
+| **Tareas requisito** | TR-03 |
 
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | TR-05 |
-| **Título** | |
+| **Título** | Implementar funciones de activación/inactivación de usuarios |
 | **ID de la Historia de Uso asociada** | HU-03 |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Tareas requisito** | Id de las tareas de las cuales es dependiente |
+| **Descripción** | Desarrollar la lógica para cambiar el estado activo/inactivo de una cuenta de usuario |
+| **Tareas requisito** | TR-01 |
 
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | TR-06 |
-| **Título** | |
+| **Título** | Crear interfaz de administración de usuarios |
 | **ID de la Historia de Uso asociada** | HU-03 |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Tareas requisito** | Id de las tareas de las cuales es dependiente |
+| **Descripción** | Desarrollar la interfaz para que administradores puedan gestionar (crear, activar, inactivar) usuarios |
+| **Tareas requisito** | TR-02, TR-05 |
 
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | TR-07 |
-| **Título** | |
+| **Título** | Diseñar modelo de datos de clientes |
 | **ID de la Historia de Uso asociada** | HU-04 |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Tareas requisito** | Id de las tareas de las cuales es dependiente |
+| **Descripción** | Crear el modelo de datos para almacenar información de clientes bancarios |
+| **Tareas requisito** | Ninguna |
 
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | TR-08 |
-| **Título** | |
+| **Título** | Implementar servicio CRUD de clientes |
 | **ID de la Historia de Uso asociada** | HU-04 |
-| **Descripción** | Como [tipo de usuario] quiero [necesidad o acción] para [beneficio u objetivo] |
-| **Tareas requisito** | Id de las tareas de las cuales es dependiente |
+| **Descripción** | Desarrollar los servicios para crear, leer, actualizar y eliminar información de clientes |
+| **Tareas requisito** | TR-07 |
