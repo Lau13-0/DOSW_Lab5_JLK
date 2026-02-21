@@ -24,8 +24,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-01 |
 | **Título** | Crear nuevo usuario desde administrador |
 | **Descripción** | Como administrador del sistema quiero crear nuevas cuentas de usuario con nombre de usuario y contraseña para que operadores y clientes puedan acceder a la plataforma Bankify |
-| **Prioridad** | [Alta] [Media] [Baja] |
-| **Estimación** | Puntos de historia |
+| **Prioridad** | Alta |
+| **Estimación** | 5 puntos - Funcionalidad foundacional que requiere diseño del modelo de datos y servicio REST. Complejidad media por validaciones y gestión de contraseñas. |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -33,8 +33,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-02 |
 | **Título** | Autenticar usuario con credenciales |
 | **Descripción** | Como usuario (operador o cliente) quiero iniciar sesión con mi usuario y contraseña para acceder a mis funcionalidades en la plataforma |
-| **Prioridad** | [Alta] [Media] [Baja] |
-| **Estimación** | Puntos de historia |
+| **Prioridad** | Alta |
+| **Estimación** | 8 puntos - Funcionalidad crítica que requiere implementar autenticación segura, gestión de sesiones y tokens JWT. Complejidad alta por requerimientos de seguridad. |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -42,8 +42,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-03 |
 | **Título** | Gestionar estado de cuentas de usuario |
 | **Descripción** | Como administrador quiero activar e inactivar cuentas de usuario para controlar el acceso a la plataforma |
-| **Prioridad** | [Alta] [Media] [Baja] |
-| **Estimación** | Puntos de historia |
+| **Prioridad** | Media |
+| **Estimación** | 5 puntos - Funcionalidad de apoyo para administración. Complejidad media por manejo de estados y auditoría de cambios de estado. |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -51,8 +51,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-04 |
 | **Título** | Registrar y consultar clientes bancarios |
 | **Descripción** | Como administrador quiero crear y consultar información de clientes para gestionar los datos de quiénes son los titulares de las cuentas bancarias |
-| **Prioridad** | [Alta] [Media] [Baja] |
-| **Estimación** | Puntos de historia |
+| **Prioridad** | Alta |
+| **Estimación** | 5 puntos - Funcionalidad crítica para negocio. Complejidad media por captura de datos complejos y búsqueda/filtrado de información de clientes. |
 | **Épica asociada** | EP-02 |
 
 ---
