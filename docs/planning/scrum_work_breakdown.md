@@ -24,6 +24,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-01 |
 | **Título** | Crear nuevo usuario desde administrador |
 | **Descripción** | Como administrador del sistema quiero crear nuevas cuentas de usuario con nombre de usuario y contraseña para que operadores y clientes puedan acceder a la plataforma Bankify |
+| **Prioridad** | [Alta] [Media] [Baja] |
+| **Estimación** | Puntos de historia |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -31,6 +33,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-02 |
 | **Título** | Autenticar usuario con credenciales |
 | **Descripción** | Como usuario (operador o cliente) quiero iniciar sesión con mi usuario y contraseña para acceder a mis funcionalidades en la plataforma |
+| **Prioridad** | [Alta] [Media] [Baja] |
+| **Estimación** | Puntos de historia |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -38,6 +42,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-03 |
 | **Título** | Gestionar estado de cuentas de usuario |
 | **Descripción** | Como administrador quiero activar e inactivar cuentas de usuario para controlar el acceso a la plataforma |
+| **Prioridad** | [Alta] [Media] [Baja] |
+| **Estimación** | Puntos de historia |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -45,6 +51,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-04 |
 | **Título** | Registrar y consultar clientes bancarios |
 | **Descripción** | Como administrador quiero crear y consultar información de clientes para gestionar los datos de quiénes son los titulares de las cuentas bancarias |
+| **Prioridad** | [Alta] [Media] [Baja] |
+| **Estimación** | Puntos de historia |
 | **Épica asociada** | EP-02 |
 
 ---
@@ -108,8 +116,38 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **Tareas requisito** | Ninguna |
 
 | Campo | Descripción |
+|-------|-------------|| **ID** | TR-09 |
+| **Título** | Crear pruebas unitarias para creación de usuarios |
+| **ID de la Historia de Uso asociada** | HU-01 |
+| **Descripción** | Desarrollar casos de prueba para validar la funcionalidad de creación de usuarios |
+| **Tareas requisito** | TR-02 |
+
+| Campo | Descripción |
 |-------|-------------|
-| **ID** | TR-08 |
+| **ID** | TR-10 |
+| **Título** | Crear pruebas unitarias para autenticación |
+| **ID de la Historia de Uso asociada** | HU-02 |
+| **Descripción** | Desarrollar casos de prueba para validar la funcionalidad de autenticación y generación de tokens |
+| **Tareas requisito** | TR-03 |
+
+| Campo | Descripción |
+|-------|-------------|
+| **ID** | TR-11 |
+| **Título** | Crear pruebas unitarias para activación/inactivación de usuarios |
+| **ID de la Historia de Uso asociada** | HU-03 |
+| **Descripción** | Desarrollar casos de prueba para validar el cambio de estado de cuentas de usuario |
+| **Tareas requisito** | TR-05 |
+
+| Campo | Descripción |
+|-------|-------------|
+| **ID** | TR-12 |
+| **Título** | Crear interfaz de consulta de clientes |
+| **ID de la Historia de Uso asociada** | HU-04 |
+| **Descripción** | Desarrollar la interfaz para que administradores puedan consultar y visualizar información de clientes |
+| **Tareas requisito** | TR-08 |
+
+| Campo | Descripción |
+|-------|-------------|| **ID** | TR-08 |
 | **Título** | Implementar servicio CRUD de clientes |
 | **ID de la Historia de Uso asociada** | HU-04 |
 | **Descripción** | Desarrollar los servicios para crear, leer, actualizar y eliminar información de clientes |
