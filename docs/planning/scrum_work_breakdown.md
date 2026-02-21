@@ -41,8 +41,6 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-01 |
 | **Título** | Crear nuevo usuario desde administrador |
 | **Descripción** | Como administrador del sistema quiero crear nuevas cuentas de usuario con nombre de usuario y contraseña para que operadores y clientes puedan acceder a la plataforma Bankify |
-| **Prioridad** | [Alta] |
-| **Estimación** | 8 puntos de historia |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -50,8 +48,6 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-02 |
 | **Título** | Autenticar usuario con credenciales |
 | **Descripción** | Como usuario (operador o cliente) quiero iniciar sesión con mi usuario y contraseña para acceder a mis funcionalidades en la plataforma |
-| **Prioridad** | [Alta] |
-| **Estimación** | 8 puntos de historia |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -59,8 +55,6 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-03 |
 | **Título** | Gestionar estado de cuentas de usuario |
 | **Descripción** | Como administrador quiero activar e inactivar cuentas de usuario para controlar el acceso a la plataforma |
-| **Prioridad** | [Media] |
-| **Estimación** | 5 puntos de historia |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -68,8 +62,6 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | HU-04 |
 | **Título** | Registrar y consultar clientes bancarios |
 | **Descripción** | Como administrador quiero crear y consultar información de clientes para gestionar los datos de quiénes son los titulares de las cuentas bancarias |
-| **Prioridad** | [Alta] |
-| **Estimación** | 13 puntos de historia |
 | **Épica asociada** | EP-02 |
 
 ---
