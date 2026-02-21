@@ -25,7 +25,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **Título** | Crear nuevo usuario desde administrador |
 | **Descripción** | Como administrador del sistema quiero crear nuevas cuentas de usuario con nombre de usuario y contraseña para que operadores y clientes puedan acceder a la plataforma Bankify |
 | **Prioridad** | Alta |
-| **Estimación** | 5 puntos - Funcionalidad foundacional que requiere diseño del modelo de datos y servicio REST. Complejidad media por validaciones y gestión de contraseñas. |
+| **Estimación** | 5 puntos |
+| **Justificación** | Funcionalidad foundacional que requiere diseño de modelo y servicio REST con validaciones |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -34,7 +35,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **Título** | Autenticar usuario con credenciales |
 | **Descripción** | Como usuario (operador o cliente) quiero iniciar sesión con mi usuario y contraseña para acceder a mis funcionalidades en la plataforma |
 | **Prioridad** | Alta |
-| **Estimación** | 8 puntos - Funcionalidad crítica que requiere implementar autenticación segura, gestión de sesiones y tokens JWT. Complejidad alta por requerimientos de seguridad. |
+| **Estimación** | 8 puntos |
+| **Justificación** | Autenticación segura con sesiones y JWT requiere complejidad alta por requerimientos de seguridad |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -43,7 +45,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **Título** | Gestionar estado de cuentas de usuario |
 | **Descripción** | Como administrador quiero activar e inactivar cuentas de usuario para controlar el acceso a la plataforma |
 | **Prioridad** | Media |
-| **Estimación** | 5 puntos - Funcionalidad de apoyo para administración. Complejidad media por manejo de estados y auditoría de cambios de estado. |
+| **Estimación** | 5 puntos |
+| **Justificación** | Funcionalidad de apoyo con complejidad media por manejo de estados y auditoría |
 | **Épica asociada** | EP-01 |
 
 | Campo | Descripción |
@@ -52,7 +55,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **Título** | Registrar y consultar clientes bancarios |
 | **Descripción** | Como administrador quiero crear y consultar información de clientes para gestionar los datos de quiénes son los titulares de las cuentas bancarias |
 | **Prioridad** | Alta |
-| **Estimación** | 5 puntos - Funcionalidad crítica para negocio. Complejidad media por captura de datos complejos y búsqueda/filtrado de información de clientes. |
+| **Estimación** | 5 puntos |
+| **Justificación** | Crítica para negocio con complejidad media por captura de datos y búsqueda/filtrado |
 | **Épica asociada** | EP-02 |
 
 ---
