@@ -14,23 +14,6 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **Título** | Autenticación y Gestión de Usuarios |
 | **Descripción** | Bankify necesita esta épica para establecer un sistema seguro de autenticación que permita a operadores y clientes acceder a la plataforma con credenciales de usuario y contraseña. Además, es necesario un módulo de gestión de usuarios que permita a los administradores crear, activar e inactivar cuentas de usuario de forma controlada. |
 | **Stakeholder** | Administradores del sistema, Operadores de Bankify y Clientes finales |
-| **Título** | Gestión de Clientes y Cuentas Bancarias |
-| **Descripción** | Explique el por qué Bankify necesita esta épica |
-| **Stakeholder** | ¿Quién es el stakeholder interesado en que se implemente esta épica? |
-
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | EP-03 |
-| **Título** | Operaciones Bancarias Básicas |
-| **Descripción** | Explique el por qué Bankify necesita esta épica |
-| **Stakeholder** | ¿Quién es el stakeholder interesado en que se implemente esta épica? |
-
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | EP-04 |
-| **Título** | Reportes y Declaración de Impuestos |
-| **Descripción** | Explique el por qué Bankify necesita esta épica |
-| **Stakeholder** | ¿Quién es el stakeholder interesado en que se implemente esta épica? |
 
 ---
 
