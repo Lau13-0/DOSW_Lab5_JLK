@@ -64,7 +64,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-01 |
 | **Título** | Diseñar modelo de datos de usuario |
 | **ID de la Historia de Uso asociada** | HU-01 |
-| **Descripción** | Crear el modelo de datos para almacenar información de usuarios (username, contraseña hasheada, estado, tipo de rol) |
+| **Descripción** | Como desarrollador quiero diseñar el modelo de datos de usuario para almacenar información de usuarios de forma estructurada |
 | **Tareas requisito** | Ninguna |
 
 | Campo | Descripción |
@@ -72,7 +72,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-02 |
 | **Título** | Implementar servicio de creación de usuarios |
 | **ID de la Historia de Uso asociada** | HU-01 |
-| **Descripción** | Desarrollar la lógica para crear nuevos usuarios con validación de datos (username único, contraseña segura) |
+| **Descripción** | Como desarrollador quiero implementar el servicio de creación de usuarios para permitir que los administradores registren nuevas cuentas |
 | **Tareas requisito** | TR-01 |
 
 | Campo | Descripción |
@@ -80,7 +80,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-03 |
 | **Título** | Implementar servicio de autenticación |
 | **ID de la Historia de Uso asociada** | HU-02 |
-| **Descripción** | Desarrollar el servicio de validación de credenciales y generación de sesiones/tokens |
+| **Descripción** | Como desarrollador quiero implementar el servicio de autenticación para validar credenciales y generar sesiones |
 | **Tareas requisito** | TR-01 |
 
 | Campo | Descripción |
@@ -88,7 +88,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-04 |
 | **Título** | Crear interfaz de login |
 | **ID de la Historia de Uso asociada** | HU-02 |
-| **Descripción** | Desarrollar la interfaz de usuario para que los usuarios inicien sesión |
+| **Descripción** | Como desarrollador quiero crear la interfaz de login para que los usuarios puedan iniciar sesión en la plataforma |
 | **Tareas requisito** | TR-03 |
 
 | Campo | Descripción |
@@ -96,7 +96,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-05 |
 | **Título** | Implementar funciones de activación/inactivación de usuarios |
 | **ID de la Historia de Uso asociada** | HU-03 |
-| **Descripción** | Desarrollar la lógica para cambiar el estado activo/inactivo de una cuenta de usuario |
+| **Descripción** | Como desarrollador quiero implementar las funciones de activación/inactivación para permitir controlar el acceso de usuarios |
 | **Tareas requisito** | TR-01 |
 
 | Campo | Descripción |
@@ -104,7 +104,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-06 |
 | **Título** | Crear interfaz de administración de usuarios |
 | **ID de la Historia de Uso asociada** | HU-03 |
-| **Descripción** | Desarrollar la interfaz para que administradores puedan gestionar (crear, activar, inactivar) usuarios |
+| **Descripción** | Como desarrollador quiero crear la interfaz de administración para que los administradores gestionen cuentas de usuario |
 | **Tareas requisito** | TR-02, TR-05 |
 
 | Campo | Descripción |
@@ -112,7 +112,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-07 |
 | **Título** | Diseñar modelo de datos de clientes |
 | **ID de la Historia de Uso asociada** | HU-04 |
-| **Descripción** | Crear el modelo de datos para almacenar información de clientes bancarios |
+| **Descripción** | Como desarrollador quiero diseñar el modelo de datos de clientes para almacenar información de titulares de cuentas |
 | **Tareas requisito** | Ninguna |
 
 | Campo | Descripción |
@@ -120,7 +120,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-09 |
 | **Título** | Crear pruebas unitarias para creación de usuarios |
 | **ID de la Historia de Uso asociada** | HU-01 |
-| **Descripción** | Desarrollar casos de prueba para validar la funcionalidad de creación de usuarios |
+| **Descripción** | Como desarrollador quiero crear pruebas unitarias para validar la funcionalidad de creación de usuarios |
 | **Tareas requisito** | TR-02 |
 
 | Campo | Descripción |
@@ -128,7 +128,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-10 |
 | **Título** | Crear pruebas unitarias para autenticación |
 | **ID de la Historia de Uso asociada** | HU-02 |
-| **Descripción** | Desarrollar casos de prueba para validar la funcionalidad de autenticación y generación de tokens |
+| **Descripción** | Como desarrollador quiero crear pruebas unitarias para validar la funcionalidad de autenticación |
 | **Tareas requisito** | TR-03 |
 
 | Campo | Descripción |
@@ -136,7 +136,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-11 |
 | **Título** | Crear pruebas unitarias para activación/inactivación de usuarios |
 | **ID de la Historia de Uso asociada** | HU-03 |
-| **Descripción** | Desarrollar casos de prueba para validar el cambio de estado de cuentas de usuario |
+| **Descripción** | Como desarrollador quiero crear pruebas unitarias para validar el cambio de estado de cuentas de usuario |
 | **Tareas requisito** | TR-05 |
 
 | Campo | Descripción |
@@ -144,7 +144,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-12 |
 | **Título** | Crear interfaz de consulta de clientes |
 | **ID de la Historia de Uso asociada** | HU-04 |
-| **Descripción** | Desarrollar la interfaz para que administradores puedan consultar y visualizar información de clientes |
+| **Descripción** | Como desarrollador quiero crear la interfaz de consulta para que administradores puedan visualizar información de clientes |
 | **Tareas requisito** | TR-08 |
 
 | Campo | Descripción |
@@ -152,5 +152,5 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | TR-08 |
 | **Título** | Implementar servicio CRUD de clientes |
 | **ID de la Historia de Uso asociada** | HU-04 |
-| **Descripción** | Desarrollar los servicios para crear, leer, actualizar y eliminar información de clientes |
+| **Descripción** | Como desarrollador quiero implementar el servicio CRUD de clientes para permitir gestionar información de clientes |
 | **Tareas requisito** | TR-07 |
