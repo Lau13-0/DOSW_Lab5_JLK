@@ -13,6 +13,7 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **ID** | EP-01 |
 | **Título** | Autenticación y Gestión de Usuarios |
 | **Descripción** | Bankify necesita esta épica para establecer un sistema seguro de autenticación que permita a operadores y clientes acceder a la plataforma con credenciales de usuario y contraseña. Además, es necesario un módulo de gestión de usuarios que permita a los administradores crear, activar e inactivar cuentas de usuario de forma controlada. |
+| **Stakeholder** | Administradores del sistema, Operadores de Bankify y Clientes finales |
 
 ---
 
