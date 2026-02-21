@@ -116,7 +116,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **Tareas requisito** | Ninguna |
 
 | Campo | Descripción |
-|-------|-------------|| **ID** | TR-09 |
+|-------|-------------|
+| **ID** | TR-09 |
 | **Título** | Crear pruebas unitarias para creación de usuarios |
 | **ID de la Historia de Uso asociada** | HU-01 |
 | **Descripción** | Desarrollar casos de prueba para validar la funcionalidad de creación de usuarios |
@@ -147,7 +148,8 @@ La implementación de los requerimientos identificados de Bankify se desglose de
 | **Tareas requisito** | TR-08 |
 
 | Campo | Descripción |
-|-------|-------------|| **ID** | TR-08 |
+|-------|-------------|
+| **ID** | TR-08 |
 | **Título** | Implementar servicio CRUD de clientes |
 | **ID de la Historia de Uso asociada** | HU-04 |
 | **Descripción** | Desarrollar los servicios para crear, leer, actualizar y eliminar información de clientes |
