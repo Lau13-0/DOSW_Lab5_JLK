@@ -53,6 +53,20 @@ Definir la estimación de historias de usuario y tareas técnicas del backlog in
 
 Suponiendo una velocidad de equipo de **20 SP por sprint**:
 
+- Apache Software Foundation. (s.f.). Maven Archetype Plugin. Recuperado el 14 de febrero de 2026, de https://maven.apache.org/archetype/maven-archetype-plugin/
+- Apache Software Foundation. (s.f.). maven-archetype-quickstart. Recuperado el 14 de febrero de 2026, de https://maven.apache.org/archetypes/maven-archetype-quickstart/
+- GitHub, Inc. (s.f.). About pull requests. Recuperado el 14 de febrero de 2026, de https://docs.github.com/en/pull-requests
+- GitHub, Inc. (s.f.). Creating a pull request. Recuperado el 14 de febrero de 2026, de https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/creating-a-pull-request
+- GitHub, Inc. (s.f.). Reviewing changes in a pull request. Recuperado el 14 de febrero de 2026, de https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests
+
+
+## 2. Roles del Equipo Scrum
+
+Los integrantes del equipo han sido asignados a los siguientes roles del marco Scrum:
+
+- **Product Owner**: Laura Castillo - Responsable de definir y priorizar los requisitos del producto.
+- **Scrum Master**: Kevin Cuitivaa - Facilita el proceso Scrum y elimina impedimentos para el equipo.
+- **Desarrollador**: Juan Silva - Responsable de desarrollar e implementar las funcionalidades del producto.
 - **Sprint 1 (18 SP):** LJK-3 (8 SP) + LJK-4 (5 SP) + LJK-5 (5 SP).
 - **Sprint 2 (8 SP):** LJK-6 (8 SP) + estabilización funcional.
 
