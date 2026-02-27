@@ -1,156 +1,65 @@
-# Planeación del Sistema Bankify
+# Parte 4 - Estimación del Backlog (Bankify)
 
-## Desglose de trabajo: Épicas, Historias de Usuario y Tareas
+## 1. Objetivo
 
-La implementación de los requerimientos identificados de Bankify se desglose de la siguiente manera:
+Definir la estimación de historias de usuario y tareas técnicas del backlog inicial de Bankify para planear la primera iteración de desarrollo.
 
----
+## 2. Técnica de estimación
 
-## 1. Épicas:
+- **Método:** Planning Poker.
+- **Escala:** Serie Fibonacci (`1, 2, 3, 5, 8, 13`).
+- **Unidad:** Puntos de historia para HUs y puntos técnicos para tareas.
+- **Criterios considerados:** complejidad funcional, riesgo técnico, validaciones, pruebas y dependencias.
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | EP-01 |
-| **Título** | Autenticación y Gestión de Usuarios |
-| **Descripción** | Bankify necesita esta épica para establecer un sistema seguro de autenticación que permita a operadores y clientes acceder a la plataforma con credenciales de usuario y contraseña. Además, es necesario un módulo de gestión de usuarios que permita a los administradores crear, activar e inactivar cuentas de usuario de forma controlada. |
-| **Stakeholder** | Administradores del sistema, Operadores de Bankify y Clientes finales |
+## 3. Participantes
 
----
+- Product Owner (PO): priorización funcional del backlog.
+- Scrum Master (SM): facilitación y consolidación de consenso.
+- Equipo de Desarrollo: estimación técnica de historias y tareas.
 
-## 2. Historias de Usuario:
+## 4. Estimación de Historias de Usuario
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | HU-01 |
-| **Título** | Crear nuevo usuario desde administrador |
-| **Descripción** | Como administrador del sistema quiero crear nuevas cuentas de usuario con nombre de usuario y contraseña para que operadores y clientes puedan acceder a la plataforma Bankify |
-| **Prioridad** | Alta |
-| **Estimación** | 5 puntos de historia |
-| **Justificación** | Funcionalidad que requiere diseño de modelo y servicio REST con validaciones |
+| ID | Historia de Usuario | Estimación (SP) | Justificación breve |
+|----|----------------------|-----------------|---------------------|
+| LJK-3 | Creación de cuentas bancarias | 8 | Incluye validación de formato de cuenta, banco asociado y estado de activación. |
+| LJK-4 | Consulta de saldo de cuenta | 5 | Requiere validación de pertenencia de cuenta y consulta confiable del saldo. |
+| LJK-5 | Realizar depósitos a una cuenta | 5 | Implica validación de monto, actualización de saldo y registro de transacción. |
+| LJK-6 | Generación de reporte tributario en PDF | 8 | Tiene mayor complejidad por integración con servicio de generación de reportes. |
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | HU-02 |
-| **Título** | Autenticar usuario con credenciales |
-| **Descripción** | Como usuario (operador o cliente) quiero iniciar sesión con mi usuario y contraseña para acceder a mis funcionalidades en la plataforma |
-| **Prioridad** | Alta |
-| **Estimación** | 8 puntos de historia |
-| **Justificación** | Autenticación segura con sesiones y JWT requiere complejidad alta por requerimientos de seguridad |
+**Total estimado de historias:** `26 SP`.
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | HU-03 |
-| **Título** | Gestionar estado de cuentas de usuario |
-| **Descripción** | Como administrador quiero activar e inactivar cuentas de usuario para controlar el acceso a la plataforma |
-| **Prioridad** | Media |
-| **Estimación** | 5 puntos de historia |
-| **Justificación** | Funcionalidad de apoyo con complejidad media por manejo de estados y auditoría |
+## 5. Estimación de Tareas Técnicas
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | HU-04 |
-| **Título** | Registrar y consultar clientes bancarios |
-| **Descripción** | Como administrador quiero crear y consultar información de clientes para gestionar los datos de quiénes son los titulares de las cuentas bancarias |
-| **Prioridad** | Alta |
-| **Estimación** | 5 puntos de historia |
-| **Justificación** | Crítica para negocio con complejidad media por captura de datos y búsqueda/filtrado |
+| ID | Tarea | HU asociada | Estimación |
+|----|-------|-------------|-----------------|
+| TR-01 | Diseñar modelo de datos de cuentas bancarias | LJK-3 | 3 |
+| TR-02 | Implementar servicio de creación y activación de cuentas | LJK-3 | 5 |
+| TR-03 | Crear pruebas unitarias para creación de cuentas | LJK-3 | 2 |
+| TR-04 | Implementar servicio de consulta de saldo | LJK-4 | 3 |
+| TR-05 | Crear endpoint/controlador de consulta de saldo | LJK-4 | 2 |
+| TR-06 | Crear pruebas unitarias para consulta de saldo | LJK-4 | 2 |
+| TR-07 | Implementar servicio de depósitos y validación de monto | LJK-5 | 5 |
+| TR-08 | Registrar transacciones de depósito | LJK-5 | 3 |
+| TR-09 | Crear pruebas unitarias para depósitos | LJK-5 | 2 |
+| TR-10 | Implementar generador de reporte tributario PDF | LJK-6 | 5 |
+| TR-11 | Integrar servicio externo para exportación de reporte PDF | LJK-6 | 3 |
+| TR-12 | Crear pruebas unitarias para generación de reporte PDF | LJK-6 | 2 |
 
----
+**Total estimado de tareas técnicas:** `37 PT`.
 
-## 3. Tareas:
+## 6. Propuesta de distribución por sprint
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-01 |
-| **Título** | Diseñar modelo de datos de usuario |
-| **ID de la Historia de Uso asociada** | HU-01 |
-| **Descripción** | Como desarrollador quiero diseñar el modelo de datos de usuario para almacenar información de usuarios de forma estructurada |
-| **Tareas requisito** | Ninguna |
+Suponiendo una velocidad de equipo de **20 SP por sprint**:
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-02 |
-| **Título** | Implementar servicio de creación de usuarios |
-| **ID de la Historia de Uso asociada** | HU-01 |
-| **Descripción** | Como desarrollador quiero implementar el servicio de creación de usuarios para permitir que los administradores registren nuevas cuentas |
-| **Tareas requisito** | TR-01 |
+- **Sprint 1 (18 SP):** LJK-3 (8 SP) + LJK-4 (5 SP) + LJK-5 (5 SP).
+- **Sprint 2 (8 SP):** LJK-6 (8 SP) + estabilización funcional.
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-03 |
-| **Título** | Implementar servicio de autenticación |
-| **ID de la Historia de Uso asociada** | HU-02 |
-| **Descripción** | Como desarrollador quiero implementar el servicio de autenticación para validar credenciales y generar sesiones |
-| **Tareas requisito** | TR-01 |
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-04 |
-| **Título** | Crear interfaz de login |
-| **ID de la Historia de Uso asociada** | HU-02 |
-| **Descripción** | Como desarrollador quiero crear la interfaz de login para que los usuarios puedan iniciar sesión en la plataforma |
-| **Tareas requisito** | TR-03 |
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-05 |
-| **Título** | Implementar funciones de activación/inactivación de usuarios |
-| **ID de la Historia de Uso asociada** | HU-03 |
-| **Descripción** | Como desarrollador quiero implementar las funciones de activación/inactivación para permitir controlar el acceso de usuarios |
-| **Tareas requisito** | TR-01 |
+## 7. Riesgos que pueden afectar estimación
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-06 |
-| **Título** | Crear interfaz de administración de usuarios |
-| **ID de la Historia de Uso asociada** | HU-03 |
-| **Descripción** | Como desarrollador quiero crear la interfaz de administración para que los administradores gestionen cuentas de usuario |
-| **Tareas requisito** | TR-02, TR-05 |
+- Cambios de alcance en reglas de validación de cuentas y bancos.
+- Definición tardía de políticas para depósitos (límites, controles y auditoría).
+- Dependencia externa del servicio de generación de PDF para reportes tributarios.
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-07 |
-| **Título** | Diseñar modelo de datos de clientes |
-| **ID de la Historia de Uso asociada** | HU-04 |
-| **Descripción** | Como desarrollador quiero diseñar el modelo de datos de clientes para almacenar información de titulares de cuentas |
-| **Tareas requisito** | Ninguna |
 
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-09 |
-| **Título** | Crear pruebas unitarias para creación de usuarios |
-| **ID de la Historia de Uso asociada** | HU-01 |
-| **Descripción** | Como desarrollador quiero crear pruebas unitarias para validar la funcionalidad de creación de usuarios |
-| **Tareas requisito** | TR-02 |
-
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-10 |
-| **Título** | Crear pruebas unitarias para autenticación |
-| **ID de la Historia de Uso asociada** | HU-02 |
-| **Descripción** | Como desarrollador quiero crear pruebas unitarias para validar la funcionalidad de autenticación |
-| **Tareas requisito** | TR-03 |
-
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-11 |
-| **Título** | Crear pruebas unitarias para activación/inactivación de usuarios |
-| **ID de la Historia de Uso asociada** | HU-03 |
-| **Descripción** | Como desarrollador quiero crear pruebas unitarias para validar el cambio de estado de cuentas de usuario |
-| **Tareas requisito** | TR-05 |
-
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-12 |
-| **Título** | Crear interfaz de consulta de clientes |
-| **ID de la Historia de Uso asociada** | HU-04 |
-| **Descripción** | Como desarrollador quiero crear la interfaz de consulta para que administradores puedan visualizar información de clientes |
-| **Tareas requisito** | TR-08 |
-
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | TR-08 |
-| **Título** | Implementar servicio CRUD de clientes |
-| **ID de la Historia de Uso asociada** | HU-04 |
-| **Descripción** | Como desarrollador quiero implementar el servicio CRUD de clientes para permitir gestionar información de clientes |
-| **Tareas requisito** | TR-07 |
