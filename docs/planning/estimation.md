@@ -21,48 +21,45 @@ Definir la estimación de historias de usuario y tareas técnicas del backlog in
 
 | ID | Historia de Usuario | Estimación (SP) | Justificación breve |
 |----|----------------------|-----------------|---------------------|
-| HU-01 | Crear nuevo usuario desde administrador | 5 | Requiere modelo, validaciones y endpoint de creación. |
-| HU-02 | Autenticar usuario con credenciales | 8 | Implica seguridad, control de sesión y validaciones de acceso. |
-| HU-03 | Gestionar estado de cuentas de usuario | 5 | Cambio de estado con reglas de negocio y auditoría básica. |
-| HU-04 | Registrar y consultar clientes bancarios | 5 | Incluye alta de datos y consulta con filtros básicos. |
+| LJK-3 | Creación de cuentas bancarias | 8 | Incluye validación de formato de cuenta, banco asociado y estado de activación. |
+| LJK-4 | Consulta de saldo de cuenta | 5 | Requiere validación de pertenencia de cuenta y consulta confiable del saldo. |
+| LJK-5 | Realizar depósitos a una cuenta | 5 | Implica validación de monto, actualización de saldo y registro de transacción. |
+| LJK-6 | Generación de reporte tributario en PDF | 8 | Tiene mayor complejidad por integración con servicio de generación de reportes. |
 
-**Total estimado de historias:** `23 SP`.
+**Total estimado de historias:** `26 SP`.
 
 ## 5. Estimación de Tareas Técnicas
 
-| ID | Tarea | HU asociada | Estimación (PT) |
+| ID | Tarea | HU asociada | Estimación |
 |----|-------|-------------|-----------------|
-| TR-01 | Diseñar modelo de datos de usuario | HU-01 | 2 |
-| TR-02 | Implementar servicio de creación de usuarios | HU-01 | 3 |
-| TR-09 | Crear pruebas unitarias para creación de usuarios | HU-01 | 2 |
-| TR-03 | Implementar servicio de autenticación | HU-02 | 5 |
-| TR-04 | Crear interfaz de login | HU-02 | 3 |
-| TR-10 | Crear pruebas unitarias para autenticación | HU-02 | 2 |
-| TR-05 | Implementar funciones de activación/inactivación | HU-03 | 3 |
-| TR-06 | Crear interfaz de administración de usuarios | HU-03 | 3 |
-| TR-11 | Crear pruebas unitarias para activación/inactivación | HU-03 | 2 |
-| TR-07 | Diseñar modelo de datos de clientes | HU-04 | 2 |
-| TR-08 | Implementar servicio CRUD de clientes | HU-04 | 5 |
-| TR-12 | Crear interfaz de consulta de clientes | HU-04 | 3 |
+| TR-01 | Diseñar modelo de datos de cuentas bancarias | LJK-3 | 3 |
+| TR-02 | Implementar servicio de creación y activación de cuentas | LJK-3 | 5 |
+| TR-03 | Crear pruebas unitarias para creación de cuentas | LJK-3 | 2 |
+| TR-04 | Implementar servicio de consulta de saldo | LJK-4 | 3 |
+| TR-05 | Crear endpoint/controlador de consulta de saldo | LJK-4 | 2 |
+| TR-06 | Crear pruebas unitarias para consulta de saldo | LJK-4 | 2 |
+| TR-07 | Implementar servicio de depósitos y validación de monto | LJK-5 | 5 |
+| TR-08 | Registrar transacciones de depósito | LJK-5 | 3 |
+| TR-09 | Crear pruebas unitarias para depósitos | LJK-5 | 2 |
+| TR-10 | Implementar generador de reporte tributario PDF | LJK-6 | 5 |
+| TR-11 | Integrar servicio externo para exportación de reporte PDF | LJK-6 | 3 |
+| TR-12 | Crear pruebas unitarias para generación de reporte PDF | LJK-6 | 2 |
 
-**Total estimado de tareas técnicas:** `35 PT`.
+**Total estimado de tareas técnicas:** `37 PT`.
 
 ## 6. Propuesta de distribución por sprint
 
-Suponiendo una capacidad inicial de **12 a 15 SP por sprint**:
+Suponiendo una velocidad de equipo de **20 SP por sprint**:
 
-- **Sprint 1 (13 SP):** HU-01 (5 SP) + HU-03 (5 SP) + tareas base de pruebas/transversales.
-- **Sprint 2 (10 SP):** HU-02 (8 SP) + ajustes de seguridad y hardening.
-- **Sprint 3 (5 SP):** HU-04 (5 SP) + estabilización funcional.
+- **Sprint 1 (18 SP):** LJK-3 (8 SP) + LJK-4 (5 SP) + LJK-5 (5 SP).
+- **Sprint 2 (8 SP):** LJK-6 (8 SP) + estabilización funcional.
 
-> Esta distribución es inicial y debe recalibrarse con la velocidad real del equipo al cierre del Sprint 1.
+
 
 ## 7. Riesgos que pueden afectar estimación
 
-- Cambios de alcance en autenticación y permisos.
-- Definición tardía de reglas de validación de datos de clientes.
-- Dependencias técnicas no resueltas para UI/API en paralelo.
+- Cambios de alcance en reglas de validación de cuentas y bancos.
+- Definición tardía de políticas para depósitos (límites, controles y auditoría).
+- Dependencia externa del servicio de generación de PDF para reportes tributarios.
 
-## 8. Resultado
 
-La parte de estimación queda documentada con una base cuantitativa (`SP` y `PT`) para planear iteraciones, priorizar entregas y dar seguimiento de avance del backlog inicial de Bankify.

@@ -1,42 +1,63 @@
-# DOSW_Lab4_JLK
+# DOSW_Lab5_JLK
 
-a. ¿Qué es un arquetipo (Archetype) en Maven?
+## Parte 4 - Estimación del Backlog (Bankify)
 
-Un arquetipo en Maven es una plantilla o mecanismo de generación de proyectos que permite crear la estructura inicial de un proyecto (directorios, archivos y un `pom.xml` básico) siguiendo un patrón predefinido. Los arquetipos facilitan la estandarización y el inicio rápido de nuevos proyectos.
+### 1. Objetivo
 
-b. ¿Para qué sirve el arquetipo `maven-archetype-quickstart`?
+Definir la estimación de historias de usuario y tareas técnicas del backlog inicial de Bankify para planear la primera iteración de desarrollo.
 
-El arquetipo `maven-archetype-quickstart` sirve para generar un proyecto Java simple y listo para compilar, que incluye la estructura de directorios (`src/main/java`, `src/test/java`), un `pom.xml` mínimo, una clase de ejemplo y una clase de prueba. Es útil para iniciar rápidamente proyectos Java de tipo aplicación o librería con una configuración básica.
+### 2. Técnica de estimación
 
-c. ¿Cuál es el comando con el cual se puede crear un proyecto basado en un arquetipo maven?
+- **Método:** Planning Poker.
+- **Escala:** Serie Fibonacci (`1, 2, 3, 5, 8, 13`).
+- **Unidad:** Puntos de historia para HUs y puntos técnicos para tareas.
+- **Criterios considerados:** complejidad funcional, riesgo técnico, validaciones, pruebas y dependencias.
 
-Ejemplo de comando para crear un proyecto usando `maven-archetype-quickstart` (no interactivo):
+### 3. Participantes
 
-```
-mvn archetype:generate -DgroupId=com.ejemplo -DartifactId=mi-proyecto -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
-```
+- Product Owner (PO): priorización funcional del backlog.
+- Scrum Master (SM): facilitación y consolidación de consenso.
+- Equipo de Desarrollo: estimación técnica de historias y tareas.
 
-Este comando genera un nuevo proyecto con `groupId` y `artifactId` especificados usando el arquetipo indicado. Si se omiten parámetros, Maven puede entrar en modo interactivo para seleccionar opciones.
+### 4. Estimación de Historias de Usuario
 
-d. ¿Qué es un pull request en GitHub?
+| ID | Historia de Usuario | Estimación (SP) | Justificación breve |
+|----|----------------------|-----------------|---------------------|
+| LJK-3 | Creación de cuentas bancarias | 8 | Incluye validación de formato de cuenta, banco asociado y estado de activación. |
+| LJK-4 | Consulta de saldo de cuenta | 5 | Requiere validación de pertenencia de cuenta y consulta confiable del saldo. |
+| LJK-5 | Realizar depósitos a una cuenta | 5 | Implica validación de monto, actualización de saldo y registro de transacción. |
+| LJK-6 | Generación de reporte tributario en PDF | 8 | Tiene mayor complejidad por integración con servicio de generación de reportes. |
 
-Un pull request (PR) en GitHub es una solicitud para fusionar (merge) cambios realizados en una rama (o fork) hacia otra rama del repositorio (por ejemplo, `feature-branch` → `main`). El PR permite revisión de código, discusión, comprobaciones automáticas (CI) y aprobación antes de integrar los cambios.
+**Total estimado de historias:** `26 SP`.
 
-e. ¿Cómo se crea un pull request en GitHub?
+### 5. Estimación de Tareas Técnicas
 
-1. Crear y commitear los cambios en una nueva rama local y subirla al repositorio remoto (`git push origin mi-rama`).
-2. En la interfaz web de GitHub, ir al repositorio y seleccionar la opción "Compare & pull request" o "New pull request".
-3. Elegir la rama origen y destino, añadir título y descripción, asignar revisores y etiquetas si procede.
-4. Hacer clic en "Create pull request" para abrir el PR.
+| ID | Tarea | HU asociada | Estimación |
+|----|-------|-------------|------------|
+| TR-01 | Diseñar modelo de datos de cuentas bancarias | LJK-3 | 3 |
+| TR-02 | Implementar servicio de creación y activación de cuentas | LJK-3 | 5 |
+| TR-03 | Crear pruebas unitarias para creación de cuentas | LJK-3 | 2 |
+| TR-04 | Implementar servicio de consulta de saldo | LJK-4 | 3 |
+| TR-05 | Crear endpoint/controlador de consulta de saldo | LJK-4 | 2 |
+| TR-06 | Crear pruebas unitarias para consulta de saldo | LJK-4 | 2 |
+| TR-07 | Implementar servicio de depósitos y validación de monto | LJK-5 | 5 |
+| TR-08 | Registrar transacciones de depósito | LJK-5 | 3 |
+| TR-09 | Crear pruebas unitarias para depósitos | LJK-5 | 2 |
+| TR-10 | Implementar generador de reporte tributario PDF | LJK-6 | 5 |
+| TR-11 | Integrar servicio externo para exportación de reporte PDF | LJK-6 | 3 |
+| TR-12 | Crear pruebas unitarias para generación de reporte PDF | LJK-6 | 2 |
 
-f. ¿Cómo se aprueba un pull request en GitHub?
+**Total estimado de tareas técnicas:** `37 PT`.
 
-Un revisor abre el PR, examina los cambios y puede dejar comentarios. Para aprobarlo, el revisor selecciona "Review changes" y elige la opción "Approve". Tras las aprobaciones y una vez que las comprobaciones (checks) obligatorias pasan, alguien con permisos puede fusionar el PR usando "Merge pull request" (o las opciones "Squash and merge" / "Rebase and merge"). En organizaciones con políticas de protección de ramas, puede ser necesario un número mínimo de aprobaciones y que los checks de CI estén verdes.
+### 6. Propuesta de distribución por sprint
 
-g. Bibliografía (norma APA)
+Suponiendo una velocidad de equipo de **20 SP por sprint**:
 
-- Apache Software Foundation. (s.f.). Maven Archetype Plugin. Recuperado el 14 de febrero de 2026, de https://maven.apache.org/archetype/maven-archetype-plugin/
-- Apache Software Foundation. (s.f.). maven-archetype-quickstart. Recuperado el 14 de febrero de 2026, de https://maven.apache.org/archetypes/maven-archetype-quickstart/
-- GitHub, Inc. (s.f.). About pull requests. Recuperado el 14 de febrero de 2026, de https://docs.github.com/en/pull-requests
-- GitHub, Inc. (s.f.). Creating a pull request. Recuperado el 14 de febrero de 2026, de https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/creating-a-pull-request
-- GitHub, Inc. (s.f.). Reviewing changes in a pull request. Recuperado el 14 de febrero de 2026, de https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests
+- **Sprint 1 (18 SP):** LJK-3 (8 SP) + LJK-4 (5 SP) + LJK-5 (5 SP).
+- **Sprint 2 (8 SP):** LJK-6 (8 SP) + estabilización funcional.
+
+### 7. Riesgos que pueden afectar estimación
+
+- Cambios de alcance en reglas de validación de cuentas y bancos.
+- Definición tardía de políticas para depósitos (límites, controles y auditoría).
+- Dependencia externa del servicio de generación de PDF para reportes tributarios.
